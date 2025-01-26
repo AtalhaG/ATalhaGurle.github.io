@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semih Ocaklı - Kişisel CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#home">Semih Ocaklı</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+                <li><a href="#about" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                <li><a href="#education" data-tr="Eğitim" data-en="Education">Eğitim</a></li>
+                <li><a href="#experience" data-tr="Deneyim" data-en="Experience">Deneyim</a></li>
+                <li><a href="#skills" data-tr="Yetenekler" data-en="Skills">Yetenekler</a></li>
+                <li><a href="#certificates" data-tr="Sertifikalar" data-en="Certificates">Sertifikalar</a></li>
+                <li><a href="#volunteer" data-tr="Gönüllü" data-en="Volunteer">Gönüllü</a></li>
+                <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+            </ul>
+            <div class="language-switch">
+                <button id="langToggle" class="lang-btn">
+                    <i class="fas fa-globe"></i>
+                    <span data-tr="EN" data-en="TR">EN</span>
+                </button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="section">
+        <div class="container">
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='images/1734039228445.jpg') }}" alt="Semih Ocaklı">
+            </div>
+            <h1>Semih Ocaklı</h1>
+            <p class="lead" data-tr="AI Engineer Dev. & Computer Vision Specialist" data-en="AI Engineer Dev. & Computer Vision Specialist">AI Engineer Dev. & Computer Vision Specialist</p>
+            <div class="languages">
+                <span class="language" data-tr="Türkçe (Native)" data-en="Turkish (Native)">Türkçe (Native)</span>
+                <span class="language" data-tr="İngilizce" data-en="English">İngilizce</span>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+            <div class="about-content">
+                <p data-tr="Yapay zeka ve bilgisayarlı görü alanlarında uzmanlaşmış bir yazılım geliştiricisiyim. Özellikle LLM'ler, bilgisayarlı görü ve çok ajanlı sistemler üzerinde çalışıyorum. Teknolojik yenilikleri yakından takip ediyor ve sürekli kendimi geliştirmeye odaklanıyorum." 
+                   data-en="I am a software developer specialized in artificial intelligence and computer vision. I work particularly on LLMs, computer vision, and multi-agent systems. I closely follow technological innovations and focus on continuous self-improvement.">
+                    Yapay zeka ve bilgisayarlı görü alanlarında uzmanlaşmış bir yazılım geliştiricisiyim. Özellikle LLM'ler, bilgisayarlı görü ve çok ajanlı sistemler üzerinde çalışıyorum. Teknolojik yenilikleri yakından takip ediyor ve sürekli kendimi geliştirmeye odaklanıyorum.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Development</h3>
+                        <p data-tr="LLM ve Yapay Zeka Modelleri" data-en="LLM and AI Models">LLM ve Yapay Zeka Modelleri</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-eye"></i>
+                        <h3>Computer Vision</h3>
+                        <p data-tr="Görüntü İşleme ve Analiz" data-en="Image Processing and Analysis">Görüntü İşleme ve Analiz</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-eye"></i>
+                        <h3>Frontend Development</h3>
+                        <p data-tr="Web Uygulamaları" data-en="Web Applications">Web Uygulamaları</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-code"></i>
+                        <h3>Backend Development</h3>
+                        <p data-tr="API Geliştirme" data-en="API Development">API Geliştirme</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 data-tr="Eğitim" data-en="Education">Eğitim</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-tr="Kütahya Sağlık Bilimleri Üniversitesi" data-en="Kutahya Health Sciences University">Kütahya Sağlık Bilimleri Üniversitesi</h3>
+                        <p class="date">2022 - 2026</p>
+                        <p data-tr="Bilgisayar Mühendisliği" data-en="Computer Engineering">Bilgisayar Mühendisliği</p>
+                        <p>Kütahya, TR</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 data-tr="Menemen Anadolu Lisesi" data-en="Menemen Anatolian High School">Menemen Anadolu Lisesi</h3>
+                        <p class="date">2017 - 2021</p>
+                        <p>İzmir, TR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 data-tr="Deneyim" data-en="Experience">Deneyim</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Multi-Agents-AstrologAI</h3>
+                        <p class="date">Ekim '24 - Günümüz</p>
+                        <p class="role">AI Engineer Dev. - Freelancer</p>
+                        <p data-tr="Astrolojik analiz için LLM tabanlı çok ajanlı bir sistem geliştirdik. İnce ayarlı dil modellerini kullanarak özelleştirilmiş içgörüler oluşturduk ve ajanların karmaşık görevleri işbirliği içinde yönetmesini sağladık." 
+                           data-en="We developed an LLM-based multi-agent system for astrological analysis. We created customized insights using fine-tuned language models and enabled agents to collaboratively manage complex tasks.">
+                            Astrolojik analiz için LLM tabanlı çok ajanlı bir sistem geliştirdik. İnce ayarlı dil modellerini kullanarak özelleştirilmiş içgörüler oluşturduk ve ajanların karmaşık görevleri işbirliği içinde yönetmesini sağladık.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Radiology Imaging Reporting</h3>
+                        <p class="date">Aralık '24 - Aralık '24</p>
+                        <p class="role">AI Engineer Dev. - Own Project</p>
+                        <p data-tr="LLaMA Vision kullanarak radyoloji görüntülerini analiz ettim ve bulguları LLaMA Dil Modeli ile İngilizceden Türkçeye çevirdim. Prompt mühendisliği uygulayarak çıktıları doğru ve akıcı raporlama için optimize ettim."
+                           data-en="I analyzed radiology images using LLaMA Vision and translated findings from English to Turkish using the LLaMA Language Model. I optimized outputs for accurate and fluent reporting by applying prompt engineering.">
+                            LLaMA Vision kullanarak radyoloji görüntülerini analiz ettim ve bulguları LLaMA Dil Modeli ile İngilizceden Türkçeye çevirdim. Prompt mühendisliği uygulayarak çıktıları doğru ve akıcı raporlama için optimize ettim.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>KESKOP Chatbot with RAG</h3>
+                        <p class="date">Ekim '24 - Kasım '24</p>
+                        <p class="role">LLM Engineer Dev. - Internship Project</p>
+                        <p data-tr="Stajım sırasında, Türkiye'deki bir kooperatif için Langchain kütüphanesini kullanarak Türkçe veri seti üzerinde bir RAG (Retrieval-Augmented Generation) uygulaması geliştirdim. Yerel bir büyük dil modeli (LLM) kullanarak bilgi çıkarım sürecini geliştirdim ve sonuçları iyileştirdim."
+                           data-en="During my internship, I developed a RAG (Retrieval-Augmented Generation) application using the Langchain library on a Turkish dataset for a cooperative in Turkey. I improved the information extraction process and enhanced results using a local large language model (LLM).">
+                            Stajım sırasında, Türkiye'deki bir kooperatif için Langchain kütüphanesini kullanarak Türkçe veri seti üzerinde bir RAG (Retrieval-Augmented Generation) uygulaması geliştirdim. Yerel bir büyük dil modeli (LLM) kullanarak bilgi çıkarım sürecini geliştirdim ve sonuçları iyileştirdim.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Turkish Plate Recognition</h3>
+                        <p class="date">Eylül '24 - Ekim '24</p>
+                        <p class="role">Computer Vision Dev. - Internship Project</p>
+                        <p data-tr="Stajım sırasında, Türk plakalarını tanımaya yönelik bir sistem geliştirdim. YOLOv8n modelini kullanarak plaka tespiti ve tanıma işlemlerini optimize ettim. Modeli ONNX formatına dönüştürdüm, TensorRT ile hız ve performans iyileştirmeleri gerçekleştirdim."
+                           data-en="During my internship, I developed a system for Turkish license plate recognition. I optimized plate detection and recognition processes using the YOLOv8n model. I converted the model to ONNX format and implemented speed and performance improvements with TensorRT.">
+                            Stajım sırasında, Türk plakalarını tanımaya yönelik bir sistem geliştirdim. YOLOv8n modelini kullanarak plaka tespiti ve tanıma işlemlerini optimize ettim. Modeli ONNX formatına dönüştürdüm, TensorRT ile hız ve performans iyileştirmeleri gerçekleştirdim.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Teknofest - AI in Health</h3>
+                        <p class="date">Mart '24 - Eylül '24</p>
+                        <p class="role">AI Engineer Dev.</p>
+                        <p data-tr="Teknofest'te mamogram veri setini hazırladık ve kitle ve kalsifikasyon tespiti için YOLOv10 kullanarak yüksek doğruluklu bir model eğittik. Ayrıca Llama 3 ile BI-RADS raporlarını temizledik, veri setini dengeledik ve Mixtral ile doğrulayarak model performansını artırmak için metin hatalarını düzelttik."
+                           data-en="At Teknofest, we prepared a mammogram dataset and trained a high-accuracy model using YOLOv10 for mass and calcification detection. We also cleaned BI-RADS reports with Llama 3, balanced the dataset, and corrected text errors using Mixtral to improve model performance.">
+                            Teknofest'te mamogram veri setini hazırladık ve kitle ve kalsifikasyon tespiti için YOLOv10 kullanarak yüksek doğruluklu bir model eğittik. Ayrıca Llama 3 ile BI-RADS raporlarını temizledik, veri setini dengeledik ve Mixtral ile doğrulayarak model performansını artırmak için metin hatalarını düzelttik.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Neural Net Performance Analysis</h3>
+                        <p class="date">Ocak '24 - Nisan '24</p>
+                        <p class="role">Computer Vision Dev. (part-time)</p>
+                        <p data-tr="Ayak görüntüleri üzerine odaklanarak çeşitli sinir ağı algoritmalarının performansını değerlendirdim. 15 farklı sinir ağı algoritması ve 3 hibrit algoritma kullanarak başarı oranlarını sıraladım."
+                           data-en="I evaluated the performance of various neural network algorithms focusing on foot images. I ranked success rates using 15 different neural network algorithms and 3 hybrid algorithms.">
+                            Ayak görüntüleri üzerine odaklanarak çeşitli sinir ağı algoritmalarının performansını değerlendirdim. 15 farklı sinir ağı algoritması ve 3 hibrit algoritma kullanarak başarı oranlarını sıraladım.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>MiceAI - Fitrat</h3>
+                        <p class="date">Ocak '23 - Nisan '23</p>
+                        <p class="role">Database Dev. (part-time)</p>
+                        <p data-tr="MiceAI-Fitrat projesine ek olarak, şifreleme yöntemleri kullanarak bir veritabanı geliştirdim ve kullanıcı kayıt bilgilerini şifreleyerek güvenlik ve gizliliği artırdım."
+                           data-en="In addition to the MiceAI-Fitrat project, I developed a database using encryption methods and enhanced security and privacy by encrypting user registration information.">
+                            MiceAI-Fitrat projesine ek olarak, şifreleme yöntemleri kullanarak bir veritabanı geliştirdim ve kullanıcı kayıt bilgilerini şifreleyerek güvenlik ve gizliliği artırdım.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 data-tr="Yazılım Dilleri & Kütüphaneler" data-en="Programming Languages & Libraries">Yazılım Dilleri & Kütüphaneler</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p data-tr="ML/AI Geliştirme" data-en="ML/AI Development">ML/AI Geliştirme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>C</h3>
+                    <p data-tr="Sistem Programlama" data-en="System Programming">Sistem Programlama</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>C#</h3>
+                    <p data-tr="Arayüz Programlama" data-en="Interface Programming">Arayüz Programlama</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p data-tr="Nesne Yönelimli" data-en="Object Oriented">Nesne Yönelimli</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p data-tr="Veri Yönetimi" data-en="Data Management">Veri Yönetimi</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>TensorFlow</h3>
+                    <p data-tr="Derin Öğrenme" data-en="Deep Learning">Derin Öğrenme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>PyTorch</h3>
+                    <p data-tr="Model Eğitimi" data-en="Model Training">Model Eğitimi</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>OpenCV</h3>
+                    <p data-tr="Görüntü İşleme" data-en="Image Processing">Görüntü İşleme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Scikit-learn</h3>
+                    <p data-tr="ML Algoritmaları" data-en="ML Algorithms">ML Algoritmaları</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>NumPy</h3>
+                    <p data-tr="Bilimsel Hesaplama" data-en="Scientific Computing">Bilimsel Hesaplama</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-table"></i>
+                    <h3>Pandas</h3>
+                    <p data-tr="Veri Analizi" data-en="Data Analysis">Veri Analizi</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Langchain</h3>
+                    <p data-tr="LLM Geliştirme" data-en="LLM Development">LLM Geliştirme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>CrewAI</h3>
+                    <p data-tr="LLM Geliştirme" data-en="LLM Development">LLM Geliştirme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Phidata</h3>
+                    <p data-tr="LLM Geliştirme" data-en="LLM Development">LLM Geliştirme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Autogen</h3>
+                    <p data-tr="LLM Geliştirme" data-en="LLM Development">LLM Geliştirme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>FastAPI</h3>
+                    <p data-tr="API Geliştirme" data-en="API Development">API Geliştirme</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Docker</h3>
+                    <p data-tr="Konteynerizasyon" data-en="Containerization">Konteynerizasyon</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>Git</h3>
+                    <p data-tr="Versiyon Kontrolü" data-en="Version Control">Versiyon Kontrolü</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-terminal"></i>
+                    <h3>Linux</h3>
+                    <p data-tr="Sistem Yönetimi" data-en="System Administration">Sistem Yönetimi</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-infinity"></i>
+                    <h3>CI/CD</h3>
+                    <p data-tr="DevOps Pratikleri" data-en="DevOps Practices">DevOps Pratikleri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2>Sertifikalar</h2>
+            <div class="certificates-grid">
+                <a href="https://www.coursera.org/account/accomplishments/verify/0SRS81HVPY6M" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Coursera Generative AI with Large Language Models</h3>
+                    <p data-tr="Yapay Zeka ve Dil Modelleri" data-en="AI and Language Models">Yapay Zeka ve Dil Modelleri</p>
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/verify/36HSZ4VMR7G3?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Coursera Machine Learning Specialization</h3>
+                    <p data-tr="Makine Öğrenmesi Uzmanlığı" data-en="Machine Learning Specialization">Makine Öğrenmesi Uzmanlığı</p>
+                </a>
+                <a href="https://www.udemy.com/certificate/UC-73846839-b5fd-4cd0-8945-0cb312a40861/" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>DataTeam Deep Learning and Python</h3>
+                    <p data-tr="Derin Öğrenme ve Python" data-en="Deep Learning and Python">Derin Öğrenme ve Python</p>
+                </a>
+                <a href="https://www.udemy.com/certificate/UC-7b8a2969-e25e-4754-a9f2-9f31ce3512e7/" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>DataTeam Machine Learning and Python</h3>
+                    <p data-tr="Makine Öğrenmesi ve Python" data-en="Machine Learning and Python">Makine Öğrenmesi ve Python</p>
+                </a>
+                <a href="https://www.udemy.com/certificate/UC-7a157a95-3d97-4c11-a08f-468440d0e297/" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>DataTeam Data Visualization and Python</h3>
+                    <p data-tr="Veri Görselleştirme ve Python" data-en="Data Visualization and Python">Veri Görselleştirme ve Python</p>
+                </a>
+                <a href="https://www.udemy.com/certificate/UC-ef0175cc-1038-4cd2-ab69-bbca27861c2f/" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>DataTeam Data Science and Python</h3>
+                    <p data-tr="Veri Bilimi ve Python" data-en="Data Science and Python">Veri Bilimi ve Python</p>
+                </a>
+                <a href="https://www.udemy.com/certificate/UC-ea74c01d-4484-45c2-8c1d-a4033868cbf1/" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Udemy Deep Learning: Natural Language Processing (NLP) with Hugging Face</h3>
+                    <p data-tr="Doğal Dil İşleme" data-en="Natural Language Processing">Doğal Dil İşleme</p>
+                </a>
+                <a href="https://medium.com/@semihocakli/yapay-zeka-tasarlayan-yapay-zeka-devin-ai-0028c72a4dec" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Post: Artificial Intelligence Designing Artificial Intelligence: Devin AI</h3>
+                    <p data-tr="Yapay Zeka Tasarımı" data-en="AI Design">Yapay Zeka Tasarımı</p>
+                </a>
+                <a href="https://medium.com/@semihocakli/llm-large-language-model-agents-ajanlar%C4%B1-1553a673a6ce" class="certificate-card" target="_blank">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Post: LLM (Large Language Model) Agents</h3>
+                    <p data-tr="LLM Ajanları ve Uygulamaları" data-en="LLM Agents and Applications">LLM Ajanları ve Uygulamaları</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="volunteer" class="section">
+        <div class="container">
+            <h2>Gönüllü Çalışmalar</h2>
+            <div class="volunteer-grid">
+                <div class="volunteer-item">
+                    <h3>Google Core Team Member</h3>
+                    <p class="date">2023</p>
+                    <p data-tr="Bilim & Teknoloji" data-en="Science & Technology">Bilim & Teknoloji</p>
+                </div>
+                <div class="volunteer-item">
+                    <h3>Fun and Innovation School club</h3>
+                    <p data-tr="Sosyal Çalışmalar (2023)" data-en="Social Works (2023)">Sosyal Çalışmalar (2023)</p>
+                </div>
+                <div class="volunteer-item">
+                    <h3 data-tr="LÖSEV - Lösemili Çocuklar Vakfı" data-en="LÖSEV - Foundation for Children with Leukemia">LÖSEV - Lösemili Çocuklar Vakfı</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 data-tr="İletişim" data-en="Contact">İletişim</h2>
+            <div class="contact-grid">
+                <a href="https://github.com/semihocakli" class="contact-item" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ocaklisemih" class="contact-item" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://x.com/semihocakli" class="contact-item" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="mailto:semihocakli35@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span data-tr="E-posta" data-en="Email">E-posta</span>
+                </a>
+                <a href="https://medium.com/@semihocakli" class="contact-item" target="_blank">
+                    <i class="fab fa-medium"></i>
+                    <span>Medium</span>
+                </a>
+                <a href="https://www.kaggle.com/semihocakli" class="contact-item" target="_blank">
+                    <i class="fab fa-kaggle"></i>
+                    <span>Kaggle</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

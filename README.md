@@ -1,6 +1,6 @@
 # Kişisel CV Web Sitesi
 
-Bu proje, modern ve responsive bir kişisel CV web sitesi şablonudur. Flask framework'ü kullanılarak geliştirilmiştir ve kolayca özelleştirilebilir bir yapıya sahiptir.
+Bu proje, modern ve responsive bir kişisel CV web sitesi şablonudur. GitHub Pages üzerinde yayınlanabilir şekilde tasarlanmış olup, kolayca özelleştirilebilir bir yapıya sahiptir.
 
 ## Özellikler
 
@@ -11,147 +11,212 @@ Bu proje, modern ve responsive bir kişisel CV web sitesi şablonudur. Flask fra
 - Kolay özelleştirilebilir bölümler
 - Font Awesome ikonları
 
-## Kurulum
+## Başlangıç Adımları
 
-1. Projeyi klonlayın:
+1. Bu repository'yi fork edin:
+   - Sağ üst köşedeki "Fork" butonuna tıklayın
+   - Fork işlemi tamamlandıktan sonra kendi repository'nize yönlendirileceksiniz
+
+2. Repository adını değiştirin:
+   - Repository ayarlarına gidin (Settings)
+   - Repository adını `KULLANICIADI.github.io` formatında değiştirin
+   - Örnek: Eğer GitHub kullanıcı adınız "johndoe" ise, "johndoe.github.io" olarak değiştirin
+
+3. Projeyi bilgisayarınıza klonlayın:
 ```bash
-git clone https://github.com/semihocakli/webproject.git
-cd webproject
+git clone https://github.com/KULLANICIADI/KULLANICIADI.github.io.git
+cd KULLANICIADI.github.io
 ```
 
-2. Python sanal ortamı oluşturun ve aktif edin:
-```bash
-python -m venv venv
-# Windows için:
-venv\Scripts\activate
-# Linux/Mac için:
-source venv/bin/activate
+## Dosya Yapısı
+
+```
+KULLANICIADI.github.io/
+│
+├── index.html              # Ana HTML dosyası
+├── static/
+│   ├── css/
+│   │   └── style.css      # Stil dosyası
+│   ├── js/
+│   │   └── main.js        # JavaScript dosyası
+│   └── images/
+│       └── profile.jpg    # Profil fotoğrafı
+└── README.md
 ```
 
-3. Gerekli paketleri yükleyin:
-```bash
-pip install -r requirements.txt
+## Özelleştirme Adımları
+
+### 1. Profil Bilgileri
+`index.html` dosyasında aşağıdaki bölümleri değiştirin:
+
+```html
+<title>ADINIZ - Kişisel CV</title>
+...
+<div class="logo">
+    <a href="#home">ADINIZ</a>
+</div>
+...
+<div class="profile-image">
+    <img src="static/images/FOTO.jpg" alt="ADINIZ">
+</div>
+<h1>ADINIZ</h1>
+<p class="lead">UNVANINIZ</p>
 ```
 
-4. Uygulamayı çalıştırın:
-```bash
-python app.py
-```
-
-## Özelleştirme Kılavuzu
-
-### 1. Kişisel Bilgiler
-
-`templates/index.html` dosyasında aşağıdaki bölümleri değiştirin:
-
-- `<title>` etiketi: Kendi adınızla güncelleyin
-- Profil resmi: `static/images/` klasörüne kendi fotoğrafınızı ekleyin ve `src` özelliğini güncelleyin
-- İsim, unvan ve dil bilgisi: İlgili `<h1>` ve `<p>` etiketlerini güncelleyin
-
-### 2. Bölümlerin Düzenlenmesi
+### 2. Bölüm İçerikleri
 
 #### Hakkımda Bölümü
-- `about` section içindeki metni kendi bilgilerinizle değiştirin
-- Öne çıkan özellikleri (`highlight-item`) kendi uzmanlık alanlarınıza göre düzenleyin
+- `about` section içindeki metni kendi bilgilerinizle güncelleyin
+- Öne çıkan özellikleri kendi uzmanlık alanlarınıza göre düzenleyin
+- Hem Türkçe hem İngilizce içeriği güncellemeyi unutmayın:
+```html
+<p data-tr="TÜRKÇE METİN" data-en="ENGLISH TEXT">TÜRKÇE METİN</p>
+```
 
 #### Eğitim Bölümü
-- `education` section içindeki timeline öğelerini kendi eğitim bilgilerinizle güncelleyin
-- Her bir eğitim için tarih, kurum ve bölüm bilgilerini ekleyin
+- Her bir eğitim için:
+```html
+<div class="timeline-item">
+    <div class="timeline-content">
+        <h3 data-tr="OKUL ADI TR" data-en="SCHOOL NAME EN">OKUL ADI</h3>
+        <p class="date">BAŞLANGIÇ - BİTİŞ</p>
+        <p data-tr="BÖLÜM TR" data-en="DEPARTMENT EN">BÖLÜM</p>
+        <p>ŞEHİR, ÜLKE</p>
+    </div>
+</div>
+```
 
 #### Deneyim Bölümü
-- `experience` section içindeki timeline öğelerini iş deneyimlerinizle güncelleyin
-- Her deneyim için tarih, pozisyon ve açıklama ekleyin
+- Her deneyim için:
+```html
+<div class="timeline-item">
+    <div class="timeline-content">
+        <h3>PROJE/ŞİRKET ADI</h3>
+        <p class="date">SÜRE</p>
+        <p class="role">POZİSYON</p>
+        <p data-tr="TÜRKÇE AÇIKLAMA" data-en="İNGİLİZCE AÇIKLAMA">
+            TÜRKÇE AÇIKLAMA
+        </p>
+    </div>
+</div>
+```
 
 #### Yetenekler Bölümü
-- `skills-grid` içindeki kartları kendi yeteneklerinize göre düzenleyin
-- Font Awesome ikonlarını uygun ikonlarla değiştirin
+- [Font Awesome](https://fontawesome.com/icons) sitesinden uygun ikonları seçin
+- Her yetenek için:
+```html
+<div class="skill-card">
+    <i class="FONT-AWESOME-ICON"></i>
+    <h3>TEKNOLOJİ ADI</h3>
+    <p data-tr="TÜRKÇE AÇIKLAMA" data-en="İNGİLİZCE AÇIKLAMA">AÇIKLAMA</p>
+</div>
+```
 
 #### Sertifikalar Bölümü
-- `certificates-grid` içindeki kartları kendi sertifikalarınızla güncelleyin
-- Her sertifika için doğru bağlantıyı `href` özelliğinde belirtin
-
-#### Gönüllü Çalışmalar Bölümü
-- `volunteer-grid` içindeki öğeleri kendi gönüllü çalışmalarınızla güncelleyin
+- Her sertifika için:
+```html
+<a href="SERTİFİKA_LİNKİ" class="certificate-card" target="_blank">
+    <i class="fas fa-certificate"></i>
+    <h3>SERTİFİKA ADI</h3>
+    <p data-tr="TÜRKÇE AÇIKLAMA" data-en="İNGİLİZCE AÇIKLAMA">AÇIKLAMA</p>
+</a>
+```
 
 #### İletişim Bölümü
-- Sosyal medya bağlantılarını kendi profillerinizle güncelleyin
-- E-posta adresini değiştirin
+- Sosyal medya linklerini güncelleyin:
+```html
+<a href="https://github.com/KULLANICIADI" class="contact-item" target="_blank">
+<a href="https://linkedin.com/in/KULLANICIADI" class="contact-item" target="_blank">
+<a href="mailto:MAILADRESINIZ" class="contact-item">
+```
 
 ### 3. Stil Özelleştirmeleri
 
-`static/css/style.css` dosyasında aşağıdaki değişiklikleri yapabilirsiniz:
+`static/css/style.css` dosyasında değiştirebileceğiniz önemli stiller:
 
-- Renk şeması: CSS değişkenlerini güncelleyin
-- Font ailesi: `font-family` özelliklerini değiştirin
-- Kartların tasarımı: `.card`, `.timeline-item` vb. sınıfların stillerini düzenleyin
-- Responsive tasarım: Media query'leri kendi ihtiyaçlarınıza göre ayarlayın
+```css
+/* Ana renkler */
+:root {
+    --primary-color: #007bff;    /* Ana renk */
+    --hover-color: #0056b3;      /* Hover rengi */
+    --text-color: #333;          /* Metin rengi */
+    --bg-color: #fff;            /* Arkaplan rengi */
+}
 
-### 4. Dil Desteği
+/* Font ailesi */
+body {
+    font-family: 'Tercih ettiğiniz font', sans-serif;
+}
 
-Çift dil desteği için:
-- Her metin öğesine `data-tr` ve `data-en` özelliklerini ekleyin
-- Türkçe ve İngilizce metinleri bu özelliklerde belirtin
+/* Kart stilleri */
+.card, .timeline-item, .skill-card {
+    /* Kart tasarımını özelleştirin */
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+```
 
-### 5. SEO Optimizasyonu
+## Deploy Etme
 
-- `<meta>` etiketlerini kendi bilgilerinizle güncelleyin
-- Sayfa başlığını ve açıklamasını optimize edin
-- Resimler için `alt` özelliklerini ekleyin
+1. Profil fotoğrafınızı ekleyin:
+   - Fotoğrafınızı `static/images/` klasörüne kopyalayın
+   - `index.html` dosyasında fotoğraf yolunu güncelleyin
 
-## Deployment
+2. Tüm değişikliklerinizi commit edin:
+```bash
+git add .
+git commit -m "Kişisel bilgiler güncellendi"
+git push origin main
+```
 
-### GitHub Pages'de Yayınlama
-
-1. Repository Adını Değiştirme:
-   - Repository adını `semihocakli.github.io` olarak değiştirin
-   - Bu format `kullaniciadi.github.io` şeklinde olmalıdır
-
-2. GitHub Pages Ayarları:
-   - Repository'nizin Settings > Pages bölümüne gidin
-   - Source kısmından "Deploy from a branch" seçeneğini seçin
-   - Branch olarak "main" (veya "master") seçin
+3. GitHub Pages'i aktifleştirin:
+   - Repository ayarlarına gidin (Settings)
+   - Sol menüden "Pages" seçeneğini bulun
+   - "Source" kısmından "Deploy from a branch" seçin
+   - Branch olarak "main" seçin
    - Save'e tıklayın
+   - Birkaç dakika bekleyin, siteniz `https://KULLANICIADI.github.io` adresinde yayınlanacak
 
-3. İndex Dosyasını Taşıma:
-   - `templates/index.html` dosyasını root dizine taşıyın
-   - Dosya adını `index.html` olarak bırakın
+## Kontrol Listesi
 
-4. Dosya Yollarını Güncelleme:
-   - `index.html` içindeki tüm Flask URL yapılarını (`url_for`) düz dosya yollarıyla değiştirin:
-   ```html
-   <!-- Eski -->
-   {{ url_for('static', filename='css/style.css') }}
-   
-   <!-- Yeni -->
-   static/css/style.css
-   ```
+Yayınlamadan önce şunları kontrol edin:
 
-5. Değişiklikleri Push Etme:
-   ```bash
-   git add .
-   git commit -m "GitHub Pages için hazırlık"
-   git push origin main
-   ```
+1. [ ] Tüm kişisel bilgiler güncellendi
+2. [ ] Profil fotoğrafı eklendi ve görünüyor
+3. [ ] Tüm linkler doğru çalışıyor
+4. [ ] Türkçe/İngilizce çeviriler tamamlandı
+5. [ ] Responsive tasarım farklı cihazlarda test edildi
+6. [ ] Tüm sosyal medya linkleri güncellendi
+7. [ ] Font Awesome ikonları doğru görünüyor
+8. [ ] GitHub Pages aktifleştirildi
 
-6. Yayınlanmayı Kontrol Etme:
-   - Birkaç dakika bekleyin
-   - `https://semihocakli.github.io` adresini ziyaret edin
+## Sorun Giderme
 
-### Diğer Platformlar
+1. Sayfa boş görünüyorsa:
+   - Dosya yollarının doğru olduğunu kontrol edin
+   - Repository adının doğru formatta olduğunu kontrol edin
+   - GitHub Pages'in aktif olduğunu kontrol edin
+   - JavaScript konsolunda hata olup olmadığını kontrol edin
 
-1. Heroku'ya deploy etmek için:
-- `Procfile` dosyası ekleyin
-- `requirements.txt` dosyasını güncelleyin
-- Heroku CLI kullanarak deploy edin
+2. Dil değiştirme çalışmıyorsa:
+   - Tüm metinlerde `data-tr` ve `data-en` özelliklerinin olduğunu kontrol edin
+   - JavaScript konsolunda hata olup olmadığını kontrol edin
 
-2. Diğer platformlar için:
-- İlgili platform dokümantasyonunu takip edin
-- Gerekli konfigürasyon dosyalarını ekleyin
+3. Responsive tasarım sorunları:
+   - Chrome DevTools ile farklı ekran boyutlarını test edin
+   - CSS medya sorgularını kontrol edin
+
+4. Fotoğraf görünmüyorsa:
+   - Dosya yolunun doğru olduğunu kontrol edin
+   - Dosya adında boşluk veya özel karakter olmadığından emin olun
 
 ## Lisans
 
 Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
 
 ## İletişim
+
 Sorularınız için:
-- E-posta: semihocakli@gmail.com
+- GitHub: [semihocakli](https://github.com/semihocakli)
+- E-posta: semihocakli35@gmail.com
