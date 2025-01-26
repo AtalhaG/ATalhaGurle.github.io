@@ -77,6 +77,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.hidden {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .container {
@@ -342,18 +350,6 @@ h2 {
     }
 }
 
-/* Animasyonlar */
-.section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Profil Resmi */
 .profile-image {
     width: 200px;
@@ -489,5 +485,117 @@ h2 {
     .contact-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+}
+
+/* Sertifikalar Grid */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-card i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.certificate-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.certificate-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.certificate-card:hover i {
+    transform: rotate(360deg);
+}
+
+/* Sertifikalar Responsive */
+@media screen and (max-width: 1200px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .certificate-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Dil Değiştirme Butonu */
+.language-switch {
+    margin-left: 2rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+.lang-btn i {
+    font-size: 1rem;
+}
+
+/* Responsive düzenlemeler için dil butonu */
+@media screen and (max-width: 768px) {
+    .language-switch {
+        position: absolute;
+        top: 1rem;
+        right: 5rem;
+    }
+    
+    .lang-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
     }
 } 
