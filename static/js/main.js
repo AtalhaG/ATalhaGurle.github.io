@@ -6,7 +6,7 @@ const navLinks = document.querySelectorAll('.nav-links li');
 burger.addEventListener('click', () => {
     // Toggle nav
     nav.classList.toggle('active');
-    
+
     // Animate links
     navLinks.forEach((link, index) => {
         if (link.style.animation) {
@@ -52,15 +52,15 @@ window.addEventListener('scroll', checkSections);
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        
+
         if (targetSection) {
             targetSection.scrollIntoView({
                 behavior: 'smooth'
             });
-            
+
             // Mobil menüyü kapat
             if (nav.classList.contains('active')) {
                 nav.classList.remove('active');
@@ -71,7 +71,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Dil değiştirme fonksiyonu
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const langToggle = document.getElementById('langToggle');
     let currentLang = 'tr'; // Varsayılan dil Türkçe
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Buton metnini güncelle
         const buttonText = lang === 'tr' ? 'EN' : 'TR';
         langToggle.querySelector('span').textContent = buttonText;
-        
+
         // Tüm çevrilebilir elementleri güncelle
         translatableElements.forEach(element => {
             const translation = element.getAttribute(`data-${lang}`);
@@ -107,16 +107,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Özel çeviriler için translations nesnesini kullan
         const translations = {
             tr: {
-                lead: 'AI Engineer Dev. & Computer Vision Specialist',
-                aboutText: 'Yapay zeka ve bilgisayarlı görü alanlarında uzmanlaşmış bir yazılım geliştiricisiyim. Özellikle LLM\'ler, bilgisayarlı görü ve çok ajanlı sistemler üzerinde çalışıyorum. Teknolojik yenilikleri yakından takip ediyor ve sürekli kendimi geliştirmeye odaklanıyorum.',
+                lead: 'AI Engineer Dev. & Mobile Application Dev.',
+                aboutText: 'Merhaba, ben Talha. Bilgisayar mühendisliği öğrencisiyim ve Dart,Java, Python, C# dillerini kullanarak projeler geliştiriyorum. Özellikle Flutter uygulama geliştirme, yapay zekâ ve veri analizi konularına ilgi duyuyorum. Kendimi sürekli geliştirerek yazılım ve yapay zekâ alanlarında ilerlemeyi hedefliyorum. Mobil alanda Flutter ve Firebase kullanma deneyimim bulunuyor ve Flutter ile mobil uygulama geliştirilen Teknofest finalisti olan takımıma kaptanlık ediyorum.',
                 skillsTitle: 'Yazılım Dilleri & Kütüphaneler',
                 certificatesTitle: 'Sertifikalar',
                 volunteerTitle: 'Gönüllü Çalışmalar',
                 contactTitle: 'İletişim'
             },
             en: {
-                lead: 'AI Engineer Dev. & Computer Vision Specialist',
-                aboutText: 'I am a software developer specialized in artificial intelligence and computer vision. I work particularly on LLMs, computer vision, and multi-agent systems. I closely follow technological innovations and focus on continuous self-improvement.',
+                lead: 'AI Engineer Dev. & Mobile Application Dev.',
+                aboutText: "Hello, I'm Talha. I'm a Computer Engineering student, developing projects using Dart,Java, Python, and C#. I'm particularly interested in Flutter app development, artificial intelligence, and data analysis. My goal is to continuously improve myself and advance in the fields of software and AI. I have experience with Flutter and Firebase in mobile development, and I'm currently captaining my team, which is a Teknofest finalist with an app developed using Flutter.",
                 skillsTitle: 'Programming Languages & Libraries',
                 certificatesTitle: 'Certificates',
                 volunteerTitle: 'Volunteer Work',
